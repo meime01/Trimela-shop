@@ -2,14 +2,23 @@
   min-height: 100vh;
 }
 
-.app {
+.main-layout {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-.content {
+.main-content {
+  flex: 1;
   padding-top: 80px; /* This accounts for the fixed navbar */
   max-width: 1280px;
+  width: 100%;
   margin: 0 auto;
   padding-left: 2rem;
   padding-right: 2rem;
+}
+
+.welcome-content {
+  text-align: center;
+  padding: 2rem 0;
 }

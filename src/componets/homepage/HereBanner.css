@@ -1,0 +1,153 @@
+.here-banner {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  overflow: hidden;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  min-height: 260px;
+}
+
+.banner-slider {
+  display: flex;
+  transition: transform 0.7s cubic-bezier(.77,0,.18,1);
+  width: 100%;
+}
+
+.banner-slide {
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 3rem 2rem;
+  box-sizing: border-box;
+  height: 260px;
+  position: relative;
+}
+
+.banner-content {
+  background: rgba(0,0,0,0.25);
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  max-width: 420px;
+}
+
+.banner-content h1 {
+  font-size: 2.2rem;
+  margin: 0 0 0.5rem 0;
+  font-weight: 700;
+}
+
+.banner-content h2 {
+  font-size: 1.3rem;
+  margin: 0 0 0.5rem 0;
+  font-weight: 500;
+}
+
+.banner-content p {
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.banner-button {
+  background: #fff;
+  color: #1877f2;
+  border: none;
+  border-radius: 20px;
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.banner-button:hover {
+  background: #1877f2;
+  color: #fff;
+}
+
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.85);
+  border: none;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  color: #1877f2;
+  cursor: pointer;
+  z-index: 2;
+  transition: background 0.2s;
+}
+
+.slider-arrow-left {
+  left: 18px;
+}
+
+.slider-arrow-right {
+  right: 18px;
+}
+
+.slider-arrow:hover {
+  background: #1877f2;
+  color: #fff;
+}
+
+.slider-dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 18px;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.slider-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #1877f2;
+  opacity: 0.7;
+  cursor: pointer;
+  transition: background 0.2s, opacity 0.2s;
+  padding: 0;
+}
+
+.slider-dot.active,
+.slider-dot:hover {
+  background: #1877f2;
+  opacity: 1;
+}
+
+@media (max-width: 700px) {
+  .here-banner {
+    min-height: 180px;
+  }
+  .banner-slide {
+    height: 180px;
+    padding: 1.2rem 0.5rem;
+  }
+  .banner-content {
+    padding: 1rem 1rem;
+    max-width: 90vw;
+  }
+  .banner-content h1 {
+    font-size: 1.2rem;
+  }
+  .banner-content h2 {
+    font-size: 1rem;
+  }
+  .banner-content p {
+    font-size: 0.9rem;
+  }
+}
