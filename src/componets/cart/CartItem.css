@@ -1,0 +1,99 @@
+.cart-item {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 1rem;
+  background: var(--clr-white);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  margin-bottom: 1rem;
+}
+
+.title {
+  display: grid;
+  grid-template-columns: 75px 1fr;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.title img {
+  width: 100%;
+  height: 75px;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+.name {
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+.price-small {
+  color: var(--clr-primary-5);
+}
+
+.price {
+  display: none;
+}
+
+.amount-btns {
+  width: 100px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-items: center;
+}
+
+.amount-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+  font-size: 1rem;
+  color: var(--clr-primary-5);
+}
+
+.amount {
+  margin-bottom: 0;
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.subtotal {
+  color: var(--clr-grey-5);
+  margin-bottom: 0;
+}
+
+.remove-btn {
+  color: var(--clr-red-dark);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.25rem;
+}
+
+@media (min-width: 776px) {
+  .cart-item {
+    grid-template-columns: 1fr 1fr 1fr 1fr auto;
+    align-items: center;
+    grid-template-rows: 75px;
+  }
+  
+  .title {
+    margin-bottom: 0;
+  }
+  
+  .price-small {
+    display: none;
+  }
+  
+  .price {
+    display: block;
+  }
+  
+  .subtotal {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+}
